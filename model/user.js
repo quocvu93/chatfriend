@@ -1,6 +1,6 @@
 
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://vu:1234@ds135926.mlab.com:35926/app1234';
+var url = process.env.MONGODB_URI || 'mongodb://vu:1234@ds135926.mlab.com:35926/app1234';
 var assert = require('assert');
 // Database Name
 var dbName = 'app1234';
