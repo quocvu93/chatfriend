@@ -1,0 +1,20 @@
+extends layout
+block body-content
+    div#form-register
+        div
+            form(action = "/login", method = "POST")
+                div.child-form
+                    h4 Nhập Tên(Yêu Cầu Nhớ Khi Đăng Nhập):
+                    div.display-err
+                        span #{name_err}
+                    input.form(type="text" name="name",id="name" size="45" onfocus="elementHasfocus()")
+                div.child-form
+                    h4 Nhập Mật Khẩu:
+                    div.display-err
+                        span #{password_err}
+                    input.form(type="password" name="password",id="password" size="45" onfocus="elementHasfocus()")
+                div.child-form
+                    span #{message}
+                div.child-form
+                    button.btn(type = "submit") CHƠI NGAY
+                    
